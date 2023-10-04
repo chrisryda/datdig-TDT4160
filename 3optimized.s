@@ -1,6 +1,7 @@
 li t1, 2
 div t1, a0, t1 #max d (A/2)
 li t0, 1 # iterator value
+
 loop_head:
     blt t1, t0, end
     rem s0, a0, t0
