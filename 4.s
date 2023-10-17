@@ -1,10 +1,3 @@
-li a0, 1
-li a1, 1
-li a2, 1
-li a3, 1
-li a4, 1
-li a5, 2
-
 j main
 
 swap:
