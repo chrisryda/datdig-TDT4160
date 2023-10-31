@@ -2,7 +2,7 @@
 .data
 
 # SETT DENNE TIL 0 NÅR DU SKAL LEVERE
-test_mode: .word   1 
+test_mode: .word   0
 
 verbose:   .word   1
 
@@ -15,7 +15,6 @@ str1:      .string "Puttet verdien "
 str2:      .string " på addresselokasjon "
 
 str3:      .string "Største tall: "
-
 
 .text
 
@@ -52,7 +51,6 @@ msws32:
     lw t0, mask
     and a0, a0, t0
     ret
-
 
 # Function: fill_array_with_random_numbers
 # Input: a0, a1, a2, a3
@@ -107,8 +105,6 @@ fawrn_loop_end:
     addi sp, sp, 24
     ret
 
-
-
 # Function: print_put_at_adress
 # Input: a0, a1
 # a0 = Value
@@ -133,7 +129,6 @@ print_put_at_adress:
     ecall
     ret
     
-    
 # Function: print_max
 # Input: a0
 # a0: Max
@@ -149,7 +144,6 @@ print_max:
     li a7, 11
     ecall
     ret
-
 
 # Function: find_max
 # Input: a0, a1
@@ -196,7 +190,6 @@ fm_loop_end:
     # TODO Etter loopen er ferdig, flytt lokalt maksimum til outputregisteret a0, og returner (to instruksjoner)
     mv a0, a3
     ret
-    
     
 # Main
 # Input: a0, a1
